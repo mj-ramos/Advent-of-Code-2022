@@ -1,7 +1,3 @@
-def readfile(file_name):
-    with open(file_name) as f:
-        return f.readlines()
-
 def part_one():
     sum_priorities = 0
 
@@ -25,8 +21,11 @@ def part_two():
         sum_priorities += abc.index(common_item) + 1 
     return sum_priorities
 
+#------------------------------------------------------------------------------------
 
-abc = [x for x in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ']
-lines = readfile('inputs/input3.txt')
+with open('inputs/input3.txt') as f:
+    lines = f.readlines()
 
-print(part_one(), part_two()) #7821 2752
+abc = [chr(code) for code in list(range(ord('a'),ord('z')+1)) + list(range(ord('A'),ord('Z')+1))]
+
+print(part_one(), part_two()) #Rigth answers: 7821 2752

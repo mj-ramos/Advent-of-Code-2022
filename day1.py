@@ -1,7 +1,3 @@
-def readfile(file_name):
-    with open(file_name) as f:
-        return f.readlines()
-
 def part_one():
     max_calories = 0
     elf_calories = 0
@@ -31,5 +27,9 @@ def part_two():
             
     return sum(top_calories)
 
-lines = readfile('inputs/input1.txt')
-print(part_one(),part_two()) #69206 197400
+#------------------------------------------------------------------------------------
+
+with open('inputs/input1.txt') as f:
+    lines = f.readlines()
+
+print(part_one(),part_two()) #Right answers: 69206 197400

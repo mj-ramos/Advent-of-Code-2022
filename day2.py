@@ -1,7 +1,3 @@
-def readfile(file_name):
-    with open(file_name) as f:
-        return f.readlines()
-
 def part_one():
     #Points: 
     #   - 0 if you lost, 3 if the round was a draw, and 6 if you won
@@ -29,6 +25,7 @@ def part_one():
     
 def part_two():
     #X means you need to lose, Y means you need to end the round in a draw, and Z means you need to win
+
     win = {'A':'B', 'B':'C', 'C':'A'}  #to win rock(A), play paper(B) etc.
     points = {'A':1,'B':2,'C':3}
 
@@ -45,6 +42,9 @@ def part_two():
 
     return score
 
+#------------------------------------------------------------------------------------
 
-lines = readfile('inputs/input2.txt')
-print(part_one(),part_two()) #13809 12316
+with open('inputs/input2.txt') as f:
+    lines = f.readlines()
+
+print(part_one(),part_two()) #Right answers: 13809 12316
